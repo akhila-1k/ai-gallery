@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    
+    <style>
+        nav{
+            height: 100px;
+            width: 100%;
+            background-color: rgba(14, 13, 13, 0.4);
+            display: flex;
+            align-items: center;
+            position: fixed;
+            z-index: 100;
+            top: 0px;
+            backdrop-filter: blur(8px);
+        }
+
+        nav .nav-items{
+            position: absolute;
+            right: 500px;
+        }
+
+        .nav-items a{
+            text-decoration: none;
+            color: beige;
+            font-size: 25px;
+            padding: 15px 5px;
+            margin: 10px;
+            
+        }
+        .nav-items:hover a{
+            filter: blur(2px);
+        }
+
+        .nav-items a:hover{
+            color: aqua;
+            filter: blur(0px);
+        }
+
+        .nav-logo img{
+            width: 166px;
+            margin-top: 5px;
+            margin-left: 4px;
+            animation: im 2s ease infinite;
+        }
+
+        @keyframes im{
+            0%{
+                width: 166px;
+                margin-top: -1px;
+                margin-left: 4px;
+            }
+            33%{
+                width: 166px;
+                margin-top: -1px;
+                margin-left: 4px;
+            }
+            66%{
+                width: 166px;
+                margin-top: 10px;
+                margin-left: 4px;
+            }
+            100%{
+                width: 166px;
+                margin-top: -1px;
+                margin-left: 4px;
+            }
+        }
+
+        .carousel-inner img{
+            height: 700px;
+            width: 80%;
+            margin-top: 100px;
+            margin-left: 60px;
+        }
+
+        .carousel-inner{
+            margin: 10px 10px 30px 150px;
+        }
+        .carousel-control-next-icon{
+            position: relative;
+            right: 100px;
+        }
+        carousel-control-pre-icon{
+            position: relative;
+            left: 100px;
+        }
+        .about h2{
+            color: brown;
+            font-size: 60px;
+            text-align: center;
+            margin-top: 120px;
+            
+        }
+        .about h1{
+            color:rgb(103, 103, 201);
+            font-size: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .about-content{
+            margin-left: 100px;
+            margin-top: 90px;
+            margin-right: 100px;
+            color:purple;
+            font-size: 35px;
+            text-align: center;
+            line-height: 80px;
+        }
+        
+        #carouselExampleAutoplaying{
+            margin-top: 100px;
+            top: 10px;
+        }
+        .collection h2{
+            color: brown;
+            font-size: 60px;
+            text-align: center;
+            margin-top: 120px;
+        }
+
+        .col-img img{
+            width: 40%;
+            height: 400px;
+            margin-left: 140px;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body style="background-color: rgb(228, 181, 181);">
+    <nav>
+        <div class="nav-logo">
+            <img src="images/logo.jpg" alt="" width="168px">
+        </div>
+        <div class="nav-items">
+            <a href="#carouselExampleAutoplaying">Home</a>
+            <a href="#about">About</a>
+            <a href="#collection">My Collection</a>
+            <a href="generate.html">Generate</a>
+        </div>
+    </nav>
+
+    <!--Home Section Start  -->
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="images/screen4.webp" class="d-block " alt="...">
+              </div>
+          <div class="carousel-item active">
+            <img src="images/main3.jpeg" class="d-block " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/screen2.jpeg" class="d-block " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/screen3.jpeg" class="d-block " alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" >Previous</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+      <!-- Home Section End -->
+
+      <!-- about section started -->
+      <div class="about" id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <h1>Welcome to the captivating realm of AI-generated art at our futuristic gallery! </h1>
+            <p>Immerse yourself in a visually stunning collection where artificial intelligence transcends boundaries, creating masterpieces that push the limits of imagination.
+                 Each piece is a harmonious blend of algorithms and creativity, showcasing the synergy between technology and artistic expression. Witness the evolution of traditional art forms as machines produce mesmerizing compositions, challenging conventional notions of the creative process. 
+                 Our AI-generated art gallery invites you to explore a realm where pixels dance to the rhythm of algorithms, and the boundaries between the human touch and machine intellect blur, offering a unique and thought-provoking experience for art enthusiasts and tech aficionados alike.</p>
+        </div>
+
+      </div>
+      <!-- about section end -->
+
+      <!-- collection section started -->
+
+      <div class="collection" id="collection">
+        <h2>My Collections</h2>
+        <div class="col-img">
+            <img src="images/collection1.jpg" alt="">
+            <img src="images/collection2.jpg" alt="">
+            <img src="images/collection3.jpg" alt="">
+            <img src="images/collection4.jpg" alt="">
+            <img src="images/collection5.jpg" alt="">
+            <img src="images/collection6.jpg" alt="">
+        </div>
+      </div>
+
+      <!-- collections section end -->
+</body>
+</html>
